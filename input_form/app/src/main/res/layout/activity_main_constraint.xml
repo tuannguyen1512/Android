@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="411sp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+    <TextView
+            android:text="@string/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp" android:layout_marginStart="10dp"/>
+    <TextView
+            android:text="@string/birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginTop="20dp" android:layout_marginStart="10dp"/>
+    <TextView
+            android:text="@string/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/birthday"
+            android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"/>
+    <TextView
+            android:text="@string/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/address" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" android:layout_marginStart="10dp"/>
+    <TextView
+            android:gravity="center_vertical"
+            android:text="@string/gender"
+            android:layout_width="55dp"
+            android:layout_height="29dp"
+            android:id="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstName"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"/>
+    <TextView
+            android:text="@string/last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/textView"
+            android:layout_marginStart="160dp" android:layout_marginTop="5dp"/>
+    <EditText
+            android:hint="@string/first_name"
+            android:autofillHints=""
+            android:inputType="text"
+            android:padding="3sp"
+            android:textSize="15sp"
+            android:background="#ddd"
+            android:layout_width="195dp"
+            android:layout_height="42dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/firstName"/>
+    <EditText
+            android:hint="@string/_birthday"
+            android:autofillHints=""
+            android:inputType="text"
+            android:padding="3sp"
+            android:textSize="15sp"
+            android:background="#ddd"
+            android:layout_width="298dp"
+            android:layout_height="30dp"
+            android:id="@+id/birthday"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"/>
+    <EditText
+            android:hint="@string/address"
+            android:autofillHints=""
+            android:inputType="textMultiLine"
+            android:padding="3sp"
+            android:textSize="15sp"
+            android:background="#ddd"
+            android:id="@+id/address"
+            android:gravity="start"
+            android:layout_width="378dp"
+            android:layout_height="63dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"/>
+    <EditText
+            android:hint="@string/email"
+            android:autofillHints=""
+            android:inputType="textEmailAddress"
+            android:padding="3sp"
+            android:textSize="15sp"
+            android:background="#ddd"
+            android:id="@+id/email"
+            android:layout_width="386dp"
+            android:layout_height="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+    <EditText
+            android:hint="@string/last_name"
+            android:autofillHints=""
+            android:inputType="text"
+            android:padding="3sp"
+            android:textSize="15sp"
+            android:background="#ddd"
+            android:layout_width="184dp"
+            android:layout_height="43dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/lastName"/>
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/lastName"
+            android:layout_marginTop="20dp">
+        <RadioButton
+                android:text="@string/male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/male"/>
+        <RadioButton
+                android:text="@string/female"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/female"/>
+    </RadioGroup>
+    <androidx.appcompat.widget.AppCompatButton
+            android:text="@string/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:text="@string/i_agree_to_terms_of_use"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+            android:text="@string/register"
+            android:layout_width="186dp"
+            android:layout_height="51dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox"
+            android:layout_marginTop="30dp"
+            android:id="@+id/register"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
