@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.phonebook2.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list"
+
+        >
+        <action
+            android:id="@+id/action_listFragment_to_infDetailFragment"
+            app:destination="@id/infDetailFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.phonebook2.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/infDetailFragment"
+        android:name="com.example.phonebook2.InfDetailFragment"
+        android:label="fragment_inf_detail"
+        tools:layout="@layout/fragment_inf_detail" />
+</navigation>
